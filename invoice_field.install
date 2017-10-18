@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * @file
+ * Updates the field from string to int.
+ */
+
+/**
+ * Change invoice field type.
+ *
+ * This is shown to users on the update.php page.
+ */
+function invoice_field_update_8001(&$sandbox) {
+  $new_field = ['type' => 'int', 'not null' => FALSE];
+  db_change_field('commerce_order__field_invoice_number', 'field_invoice_number_value', 'field_invoice_number_value', $new_field);
+}
