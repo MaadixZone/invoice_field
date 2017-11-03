@@ -144,6 +144,8 @@ class InvoiceNumberItem extends FieldItemBase {
       $this->value = 1;
     }
     $this->series_suffix = $current_suffix;
+    // Now that logic is done mark autofill to zero to prevent increasing this value again;
+    $this->autofill = 0;
   }
 
   /**
